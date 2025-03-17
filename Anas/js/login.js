@@ -55,6 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
     sessionStorage.setItem("loggedInUser", JSON.stringify(user));
 
     // Redirect to dashboard or profile page
-    window.location.href = "dashboard.html";
+    window.location.href = "../html/malek.html";
   });
 });
