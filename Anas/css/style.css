@@ -1,0 +1,23 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: #f8f9fa;
+}
+
+#sidebar-wrapper {
+  width: 250px;
+  min-height: 100vh;
+  padding-top: 20px;
+}
+
+.list-group-item {
+  transition: background 0.3s ease-in-out;
+}
+
+.list-group-item:hover {
+  background: #007bff;
+  color: white !important;
+}
+
+.card {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
