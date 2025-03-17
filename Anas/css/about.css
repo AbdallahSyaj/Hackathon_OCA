@@ -50,7 +50,8 @@ section {
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("/api/placeholder/1920/600") no-repeat center center;
+    url("https://t4.ftcdn.net/jpg/03/89/32/41/240_F_389324134_klt6KIsgdolFewUG1wEPCcZjraIrdyVD.jpg")
+      no-repeat center center;
   background-size: cover;
   color: white;
   padding: 120px 0;
@@ -208,7 +209,8 @@ section {
 /* Donation CTA Section */
 .donation-cta {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/api/placeholder/1920/800") no-repeat center center;
+    url("https://t3.ftcdn.net/jpg/02/32/58/08/240_F_232580807_1W4VLYFl6JFOIi9RuLSWjV9uveEsuAZm.jpg")
+      no-repeat center center;
   background-size: cover;
   color: white;
   text-align: center;
@@ -337,30 +339,6 @@ section {
 
 .dot.active {
   background-color: #0099e5;
-}
-
-/* Partners Section */
-.partners {
-  background-color: white;
-}
-
-.partners-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 30px;
-  align-items: center;
-}
-
-.partner {
-  text-align: center;
-  filter: grayscale(100%);
-  opacity: 0.7;
-  transition: filter 0.3s, opacity 0.3s;
-}
-
-.partner:hover {
-  filter: grayscale(0);
-  opacity: 1;
 }
 
 /* Contact Section */
@@ -521,10 +499,6 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .partners-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 60px;
@@ -567,11 +541,6 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Partners Section */
-  .partners-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .footer-links {
     flex-direction: column;
     gap: 30px;
@@ -599,11 +568,6 @@ footer {
 
   .numbers-grid {
     grid-template-columns: 1fr;
-  }
-
-  .partners-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
   }
 
   .donation-amount {
