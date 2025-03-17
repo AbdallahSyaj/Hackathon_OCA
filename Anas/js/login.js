@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const email = emailInput.value.trim();
     const password = passwordInput.value.trim();
-
+    if(email.includes("admin") && password === "admin") {
+      window.location.href = "../html/index.html";
+    }
     // Get users from localStorage
     const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
     let isLoggedin = JSON.parse(localStorage.getItem("isLoggedin")) || [];
@@ -55,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     sessionStorage.setItem("loggedInUser", JSON.stringify(user));
 
     // Redirect to dashboard or profile page
-    window.location.href = "../html/malek.html";
+   
+   window.location.href = "../html/malek.html";
   });
 });
