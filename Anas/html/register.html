@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHARITY Connect - Registration</title>
+    <link rel="stylesheet" href="../css/register.css" />
+  </head>
+  <body>
+    <div class="register-container">
+      <div class="register-image">
+        <div class="illustration">
+          <!-- This would be replaced with the actual illustration -->
+        </div>
+        <h1>CHARITY Connect</h1>
+        <p>Making a difference, together.</p>
+      </div>
+      <div class="register-form">
+        <div class="register-form-header">
+          <h2><span class="heart-icon">❤️</span> CHARITY Connect</h2>
+          <h3>Create Account</h3>
+          <p>Join our community and start making an impact</p>
+        </div>
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              placeholder="Enter first name"
+              required
+            />
+            <h4 id="forfirstname" style="color: red"></h4>
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              id="lastName"
+              placeholder="Enter last name"
+              required
+            />
+            <h4 id="forlastname" style="color: red"></h4>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div
+            class="form-text text-danger"
+            id="emailError"
+            style="color: red"
+          ></div>
+
+          <div class="form-group">
+            <label for="password">Create Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Create a strong password"
+              required
+            />
+          </div>
+          <div
+            class="form-text text-danger"
+            id="passwordError"
+            style="color: red"
+          ></div>
+
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              placeholder="Confirm your password"
+              required
+            />
+          </div>
+          <div
+            class="form-text text-danger"
+            id="confirmPasswordError"
+            style="color: red"
+          ></div>
+
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="City, Country" />
+          </div>
+
+          <button type="submit" class="register-button">Create Account</button>
+        </form>
+        <div class="login-link">
+          Already have an account? <a href="./login.html">Sign in</a>
+        </div>
+      </div>
+    </div>
+    <div id="errorModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p id="modalMessage"></p>
+      </div>
+    </div>
+
+    <script src="../js/register.js"></script>
+  </body>
+</html>

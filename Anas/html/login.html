@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHARITY Connect - Login</title>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-image">
+        <div class="illustration">
+          <!-- This would be replaced with the actual illustration -->
+        </div>
+        <div class="illustration-text">
+          <h1>CHARITY Connect</h1>
+          <p>Making a difference, together.</p>
+        </div>
+      </div>
+      <div class="login-form">
+        <div class="login-form-header">
+          <h2><span class="heart-icon">❤️</span> CHARITY Connect</h2>
+          <h3>Welcome Back!</h3>
+          <p>Sign in to continue your charitable journey</p>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <div class="remember-forgot">
+          </div>
+          <h4 id="forloginerror" style="color: red"></h4>
+          <button type="submit" class="sign-in-button">Sign In</button>
+        </form>
+        <div class="signup-link">
+          Don't have an account?
+          <a href="./register.html">Sign up now</a>
+        </div>
+      </div>
+    </div>
+    <!-- <div id="errorModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p id="modalMessage"></p>
+      </div>
+    </div> -->
+    <script src="../js/login.js"></script>
+  </body>
+</html>
