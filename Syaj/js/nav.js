@@ -3,6 +3,7 @@ document
   .addEventListener("click", function () {
     document.querySelector(".main-nav").classList.toggle("active");
     document.querySelector(".auth-controls").classList.toggle("active");
+    document.querySelector(".isLogedIn").classList.toggle("active");
     this.classList.toggle("active");
   });
 
@@ -36,34 +37,27 @@ function checkLoginStatus() {
   }
 }
 
-// First, get the logged in user ID
 const loggedInUserId = checkLoginStatus();
 
 if (loggedInUserId) {
   console.log(`User ID ${loggedInUserId} is currently logged in`);
 
-  // Get the users data and parse it correctly
   const usersData = localStorage.getItem("users");
 
   try {
-    // Parse the users data
     const users = JSON.parse(usersData);
 
-    // Find the current logged in user
     const currentUserData = users.find((user) => user.id === loggedInUserId);
 
-    // Set the background image if the user has an image
     if (currentUserData.user_img !== "") {
       document.querySelector(
         ".user-img"
       ).style.backgroundImage = `url(${currentUserData.user_img})`;
     }
 
-    // Update UI elements for logged in state
     document.querySelector(".auth-controls").style.display = "none";
     document.querySelector(".isLogedIn").style.display = "flex";
 
-    // Set global variables
     currentUser = loggedInUserId;
     is_loggedIn = true;
   } catch (error) {
@@ -72,24 +66,21 @@ if (loggedInUserId) {
 } else {
   console.log("No user is currently logged in");
 
-  // Update UI elements for logged out state
   document.querySelector(".auth-controls").style.display = "flex";
   document.querySelector(".isLogedIn").style.display = "none";
 
-  // Set global variables
   currentUser = 0;
   is_loggedIn = false;
 }
 
-document
-  .getElementsByClassName("nav-logout")
-  .addEventListener("click", function () {
-    let isLoggedin = JSON.parse(localStorage.getItem("isLoggedin")) || [];
+document.getElementById("log").addEventListener("click", function () {
+  let isLoggedin = JSON.parse(localStorage.getItem("isLoggedin")) || [];
 
-    // Find the logged-in user and set their status to false
-    isLoggedin = isLoggedin.map((user) =>
-      user.is_loggedin ? { ...user, is_loggedin: false } : user
-    );
+  // Find the logged-in user and set their status to false
+  isLoggedin = isLoggedin.map((user) =>
+    user.is_loggedin ? { ...user, is_loggedin: false } : user
+  );
 
-    localStorage.setItem("isLoggedin", JSON.stringify(isLoggedin));
-  });
+  localStorage.setItem("isLoggedin", JSON.stringify(isLoggedin));
+  window.location.reload();
+});
